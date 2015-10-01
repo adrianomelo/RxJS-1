@@ -172,6 +172,14 @@ describe("zip", function () {
     expectObservable(observable).toBe(expected,
       { x: ['1','2','3'], y: ['4','5','6'] });
   });
+  it('should work with n-ary array symmetric', function () {
+    var a = hot('---1-^-1----4----|');
+    var b = hot('---1-^--2--5----|');
+    var c = hot('---1-^---3---6-|');
+    var expected =   '----x---y-|';
+    expectObservable(Observable.zip([a,b,c])).toBe(expected,
+      { x: ['1','2','3'], y: ['4','5','6'] });
+  });
   it('should work with n-ary symmetric array selector', function () {
     var a = hot('---1-^-1----4----|');
     var b = hot('---1-^--2--5----|');
