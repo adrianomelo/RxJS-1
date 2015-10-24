@@ -187,6 +187,7 @@ export default class Observable<T> implements CoreOperators<T>  {
   map: <T, R>(project: (x: T, ix?: number) => R, thisArg?: any) => Observable<R>;
   mapTo: <R>(value: R) => Observable<R>;
   materialize: () => Observable<any>;
+  max: () => Observable<any>;
   merge: (...observables: any[]) => Observable<any>;
   mergeAll: (concurrent?: any) => Observable<any>;
   mergeMap: <R>(project: ((x: T, ix: number) => Observable<any>), projectResult?: (x: T, y: any, ix: number, iy: number) => R, concurrent?: number) => Observable<R>;

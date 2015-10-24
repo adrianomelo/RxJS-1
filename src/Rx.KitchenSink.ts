@@ -177,6 +177,9 @@ observableProto.mapTo = mapTo;
 import materialize from './operators/materialize';
 observableProto.materialize = materialize;
 
+import max from './operators/max';
+observableProto.max = max;
+
 import merge from './operators/merge';
 observableProto.merge = merge;
 
